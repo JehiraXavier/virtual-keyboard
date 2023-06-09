@@ -11,7 +11,7 @@ body {
     color: #004134;
   }
   
-  textarea {
+  .input-text {
     display: block;
     margin: 1em auto;
     padding: 0.4em;
@@ -20,9 +20,10 @@ body {
     resize: none;
     font-size: 1.2em;
     font-family: system-ui, monospace;
-    border-radius: 5px;
+    border-radius: 15px;
     color: #004134;
     cursor: pointer;
+    border: 2.5px solid #004134;
   }
   
   .keyboard {
@@ -70,11 +71,11 @@ body {
     background: rgba(255, 255, 255, 0.12);
   }
   
-  .keyboard-wide {
+  .keyboard-medium {
     width: 12%;
   }
   
-  .keyboard-extrawide {
+  .keyboard-large {
     width: 36%;
     max-width: 500px;
   }
@@ -90,11 +91,11 @@ body {
     border-radius: 50%;
   }
   
-  .keyboard-check::after {
-    background: #08ff00;
+  .keyboard-capskey::after {
+    background: #dfe3df;
   }
   
-  .keyboard-dark {
+  .keyboard-done {
     background: rgba(0, 0, 0, 0.25);
   }
   

@@ -30,7 +30,7 @@ const Keyboard = {
       this.elements.main.appendChild(this.elements.keysContainer);
       document.body.appendChild(this.elements.main);
   
-      document.querySelectorAll(".keyboard-input").forEach((element) => {
+      document.querySelectorAll(".input-text").forEach((element) => {
         element.addEventListener("focus", () => {
           this.open(element.value, (currentValue) => {
             element.value = currentValue;
@@ -101,7 +101,7 @@ const Keyboard = {
   
         switch (key) {
           case "backspace":
-            keyElement.classList.add("keyboard-wide");
+            keyElement.classList.add("keyboard-medium");
             keyElement.innerHTML = createIconHTML("backspace");
             keyElement.addEventListener("click", () => {
               this.properties.value = this.properties.value.substring(
@@ -113,19 +113,19 @@ const Keyboard = {
             break;
   
           case "caps":
-            keyElement.classList.add("keyboard-wide", "keyboard-active");
+            keyElement.classList.add("keyboard-medium", "keyboard-active");
             keyElement.innerHTML = createIconHTML("keyboard_capslock");
             keyElement.addEventListener("click", () => {
               this._toggleCapsLock();
               keyElement.classList.toggle(
-                "keyboard-check",
+                "keyboard-capskey",
                 this.properties.capsLock
               );
             });
             break;
   
           case "enter":
-            keyElement.classList.add("keyboard-wide");
+            keyElement.classList.add("keyboard-medium");
             keyElement.innerHTML = createIconHTML("keyboard_return");
             keyElement.addEventListener("click", () => {
               this.properties.value += "\n";
@@ -133,7 +133,7 @@ const Keyboard = {
             break;
   
           case "space":
-            keyElement.classList.add("keyboard-extrawide");
+            keyElement.classList.add("keyboard-large");
             keyElement.innerHTML = createIconHTML("space_bar");
             keyElement.addEventListener("click", () => {
               this.properties.value += " ";
@@ -142,7 +142,7 @@ const Keyboard = {
             break;
   
           case "done":
-            keyElement.classList.add("keyboard-wide", "keyboard-dark");
+            keyElement.classList.add("keyboard-medium", "keyboard-done");
             keyElement.innerHTML = createIconHTML("check_circle");
             keyElement.addEventListener("click", () => {
               this.close();
