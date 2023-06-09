@@ -22,6 +22,7 @@ body {
     font-family: system-ui, monospace;
     border-radius: 5px;
     color: #004134;
+    cursor: pointer;
   }
   
   .keyboard {
